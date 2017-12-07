@@ -8,7 +8,7 @@ const photoSchema = new Schema({
   },
   caption: String,
   url: String,
-  like: [{
+  likes: [{
     type: Schema.Types.ObjectId,
     ref: 'User'
   }],
