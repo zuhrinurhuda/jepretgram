@@ -3,7 +3,7 @@
     <div class="ui card" v-for="(photo, index) in photos" :key="index">
       <div class="content">
         <!-- <div class="right floated meta">{{ photo.uploadedAt }}</div> -->
-        <img class="ui avatar image" :src="photo.url"> {{ photo.uploader }}
+        <img class="ui avatar image" :src="photo.url"> {{ photo.uploader.name }}
       </div>
       <div class="image">
         <img class="" :src="photo.url">

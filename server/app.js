@@ -13,7 +13,8 @@ var photos = require('./routes/photos');
 var app = express();
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/jepretgram-zuhri');
+// mongoose.connect('mongodb://localhost/jepretgram-zuhri');
+mongoose.connect(`mongodb://zuhri:${process.env.MONGO_ATLAS_PASSWORD}@cluster0-shard-00-00-67zih.mongodb.net:27017,cluster0-shard-00-01-67zih.mongodb.net:27017,cluster0-shard-00-02-67zih.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin`);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
