@@ -6,6 +6,7 @@
         <div class="row">
           <div class="column">
             <button class="ui right floated positive button" @click="addPhotoModal">Add Photo</button>
+            <Modal/>
           </div>
         </div>
       </header>
@@ -16,14 +17,16 @@
 
 <script>
   import Navbar from '@/components/Navbar'
+  import Modal from '@/components/Modal'
   export default {
     name: 'Home',
     components: {
-      Navbar
+      Navbar,
+      Modal
     },
     methods: {
       addPhotoModal () {
-        
+        $('#addPhoto').modal('show')
       }
     }
   }
