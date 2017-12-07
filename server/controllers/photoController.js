@@ -3,14 +3,14 @@ const ObjectId = require('mongodb').ObjectId
 
 class PhotoController {
   static create (req, res) {
-    // console.log(req.body)
-    // console.log(req.verifyUser)
+    // console.log('--> masuk req.body ', req.body)
+    // console.log('--> masuk req.verify ',req.verifyUser)
     let newPhoto = new Photo({
-      uploader: req.body.uploader, //req.verifyUser.id,
+      uploader: req.verifyUser.id,
       caption: req.body.caption,
       url: req.body.url,
     })
-    // console.log(newPhoto)
+    console.log(newPhoto)
     newPhoto.save()
     .then(newPhoto => {
       res.send(newPhoto)
@@ -22,7 +22,7 @@ class PhotoController {
   }
 
   static getAll (req, res) {
-    Photo.find()
+    Photo.find().populate('uploader')
     .then(photo => res.send(photo))
     .catch(err => {
       console.log(err)

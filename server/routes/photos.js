@@ -1,9 +1,10 @@
 const express = require('express')
 const router = express.Router()
 const photoController = require('../controllers/photoController')
+const checkAuth = require('../middleware/checkAuth')
 
 // create
-router.post('/', photoController.create)
+router.post('/', checkAuth.isLogin, photoController.create)
 
 // read
 router.get('/', photoController.getAll)

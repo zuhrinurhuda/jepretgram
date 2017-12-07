@@ -1,9 +1,9 @@
-var jwt = require('jsonwebtoken')
+const jwt = require('jsonwebtoken')
 require('dotenv').config()
 
 module.exports = (req, res, next) => {
   return new Promise((resolve, reject) => {
-    console.log(req);
+    // console.log(req);
     let payload = {
       id: req.id,
       name: req.name,
