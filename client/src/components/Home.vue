@@ -16,6 +16,7 @@
 </template>
 
 <script>
+  /* global $ */
   import Navbar from '@/components/Navbar'
   import Modal from '@/components/Modal'
   export default {

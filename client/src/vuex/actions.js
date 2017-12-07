@@ -5,7 +5,14 @@ const http = axios.create({
 })
 
 const actions = {
-  
+  addPhoto: ({ commit }, payload) => {
+    // console.log('--> ini di action', payload)
+    http.post('/photos', payload, { headers: { token: localStorage.getItem('token') } })
+    .then(({ data }) => {
+      commit('setNewPhoto', data)
+    })
+    .catch(err => console.log(err))
+  }
 }
 
 export default actions

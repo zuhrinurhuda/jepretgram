@@ -1,9 +1,7 @@
 <template>
   <div class="ui attached stackable menu">
     <div class="ui container">
-      <a class="item">
-        <i class="home icon"></i> Home
-      </a>
+      <a class="item"><i class="home icon"></i>Home</a>
       <div class="right item">
         <button class="ui facebook button" @click="logout" v-if="token">
           <i class="sign out icon"></i>
@@ -21,7 +19,7 @@
 <script>
   export default {
     name: 'Navbar',
-    data: function () {
+    data: () => {
       return {
         token: localStorage.getItem('token')
       }
