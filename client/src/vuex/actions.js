@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const http = axios.create({
-  baseURL: 'http://localhost:3000'
+  baseURL: 'ec2-54-149-213-170.us-west-2.compute.amazonaws.com'
 })
 
 const actions = {
