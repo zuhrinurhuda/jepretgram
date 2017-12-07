@@ -12,6 +12,14 @@ const actions = {
       commit('setNewPhoto', data)
     })
     .catch(err => console.log(err))
+  },
+  getPhotos: ({ commit }) => {
+    // console.log('--> ini di action', payload)
+    http.get('/photos')
+    .then(({ data }) => {
+      commit('setPhotos', data)
+    })
+    .catch(err => console.log(err))
   }
 }
 
