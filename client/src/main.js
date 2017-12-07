@@ -7,7 +7,7 @@ import axios from 'axios'
 import store from './vuex/index'
 
 Vue.prototype.$http = axios.create({
-  baseURL: 'ec2-54-149-213-170.us-west-2.compute.amazonaws.com'
+  baseURL: 'http://ec2-34-210-54-101.us-west-2.compute.amazonaws.com'
 })
 
 Vue.config.productionTip = false
