@@ -20,8 +20,8 @@ const photoSchema = new Schema({
     type: Date,
     default: null
   }
-});
+})
 
-const Photo = mongoose.model('Photo', photoSchema);
+const Photo = mongoose.model('Photo', photoSchema)
 
-module.exports = Photo;
+module.exports = Photo
