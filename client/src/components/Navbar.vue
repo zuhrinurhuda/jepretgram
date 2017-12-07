@@ -38,8 +38,20 @@
     name: 'Navbar',
     methods: {
       login () {
-        
+        FB.login(function(response) {
+          if (response.status === 'connected') {
+            FB.api('/me', function(response) {
+              console.log('Successful login for: ' + response.name);
+              
+            });
+          } else {
+
+          }
+        })
       }
+    },
+    created : {
+
     }
   }
 </script>
