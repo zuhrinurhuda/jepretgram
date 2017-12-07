@@ -1,6 +1,7 @@
-var Schema = mongoose.Schema
+const mongoose = require('mongoose')
+const Schema = mongoose.Schema
 
-var userSchema = new Schema({
+const userSchema = new Schema({
   facebookId: String,
   name: String,
   email: String,
@@ -14,6 +15,6 @@ var userSchema = new Schema({
   }
 });
 
-var User = mongoose.model('User', userSchema);
+const User = mongoose.model('User', userSchema);
 
 module.exports = User;
