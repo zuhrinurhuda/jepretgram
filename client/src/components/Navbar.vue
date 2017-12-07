@@ -4,21 +4,6 @@
       <a class="item">
         <i class="home icon"></i> Home
       </a>
-      <a class="item">
-        <i class="grid layout icon"></i> Browse
-      </a>
-      <a class="item">
-        <i class="mail icon"></i> Messages
-      </a>
-      <div class="ui simple dropdown item">
-        More
-        <i class="dropdown icon"></i>
-        <div class="menu">
-          <a class="item"><i class="edit icon"></i> Edit Profile</a>
-          <a class="item"><i class="globe icon"></i> Choose Language</a>
-          <a class="item"><i class="settings icon"></i> Account Settings</a>
-        </div>
-      </div>
       <div class="right item">
         <button class="ui facebook button" @click="logout" v-if="token">
           <i class="sign out icon"></i>
